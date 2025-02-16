@@ -5,3 +5,11 @@ function calculateInvoice(subtotal, taxRate, discount) { //formula for invoice
 }
 calculateInvoice(100, 0.08, 5); //expected: $103.00
 calculateInvoice(500, 0.1, 20); //expected: $530.00
+
+console.log ('Task 2: Function Expression') //task 2
+const calculateHourlyWage = function(salary, hoursPerWeek) { // formula for wage 
+    let hourlyWage = salary / (hoursPerWeek * 52); // salary divided by hours per week
+    console.log(`Hourly Wage: $${hourlyWage.toFixed(2)}`);
+};
+calculateHourlyWage(52000, 40); //expected: $25.00
+calculateHourlyWage(75000, 35); //expected: $41.21
