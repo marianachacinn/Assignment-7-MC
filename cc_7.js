@@ -22,3 +22,20 @@ const calculateLoyaltyDiscount = (amount, years) => { //function for discount
 };
 calculateLoyaltyDiscount(100, 6); // Expected output: "Discounted Price: $85.00"
 calculateLoyaltyDiscount(200, 2); // Expected output: "Discounted Price: $190.00"
+
+console.log ('Task 4: Parameters and Arguments') //task 4
+function calculateShippingCost(weight, location, expedited = false) { //calculate shipping cost depending on the country
+    let cost;
+    if (location === "USA") { //$5 for usa
+        cost = 5 + 0.5 * weight;
+    } else if (location === "Canada") { //$10 for canada
+        cost = 10 + 0.7 * weight;
+    } else {
+        console.log("Location not supported.");
+        return;
+    }
+    if (expedited) cost += 10; //additional $10 fee
+    console.log(`Shipping Cost: $${cost.toFixed(2)}`);
+}
+calculateShippingCost(10, "USA", true); // Expected output: "Shipping Cost: $20.00"
+calculateShippingCost(5, "Canada", false); // Expected output: "Shipping Cost: $13.50"
